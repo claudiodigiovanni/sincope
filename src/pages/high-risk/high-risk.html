@@ -1,0 +1,63 @@
+<!--
+  Generated template for the HighRiskPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title></ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only>
+                <ion-icon name="information-circle-outline"></ion-icon>
+            </button>
+          </ion-buttons>
+      </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding text-wrap text-center>
+
+    <ion-card (swipe)="onSwipe($event)" > 
+        <ion-card-content>
+          <ion-card-title>
+            <h1 style="font-weight: bold">Ricovero Ospedaliero</h1>
+            </ion-card-title>
+          
+            <ion-list >
+                <ion-list-header text-wrap>
+                    Eseguire:
+                </ion-list-header>
+              
+                <ion-item>
+                  <ion-label>Monitoraggio ECG prolungato 24h-48h</ion-label>
+                  <ion-checkbox checked="true" [(ngModel)]="checked[0]"></ion-checkbox> 
+                </ion-item>
+              
+                <ion-item>
+                  <ion-label>Ecocardiografia</ion-label>
+                  <ion-checkbox  [(ngModel)]="checked[1]"></ion-checkbox>
+                </ion-item>
+              
+                <ion-item>
+                  <ion-label>Studio elettrofisiologico</ion-label>
+                  <ion-checkbox  [(ngModel)]="checked[2]"></ion-checkbox>
+                </ion-item>
+      
+                <ion-item>
+                    <ion-label>Test Ergometrico</ion-label>
+                    <ion-checkbox  [(ngModel)]="checked[3]"></ion-checkbox>
+                  </ion-item>
+      
+                  
+              </ion-list>
+              <br>
+          <ion-icon name="heart-outline"></ion-icon>
+          
+ 
+        </ion-card-content>
+      </ion-card>
+      <button ion-button round (click)="goForward()"  >Avanti</button>
+
+</ion-content>
